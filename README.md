@@ -8,15 +8,12 @@ A screensaver is triggered if $screensaver_delay is overpasss without any change
 
 ## Wiring
 
-OLED | RPi   | Pin
-------------------
-Vcc  | 3.3V  | 1
-------------------
-SDA  | GPIO2 | 3
-------------------
-SCK  | GPIO3 | 5
-------------------
-GND  | GND   | 6
+|OLED | RPi   | Pin |
+|:---:|:-----:|:---:|
+|Vcc  | 3.3V  | 1   |
+|SDA  | GPIO2 | 3   |
+|SCK  | GPIO3 | 5   |
+|GND  | GND   | 6   |
 
 ## Installation
 
