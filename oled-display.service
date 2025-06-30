@@ -1,0 +1,15 @@
+[Unit]
+Description=Display stdout (RAM files) on oled
+After=multi-user.target
+
+[Service]
+Type=idle
+
+User=akira
+ExecStart=/usr/bin/python3 /home/akira/docker/display/oled.py
+
+Restart=always
+RestartSec=60
+
+[Install]
+WantedBy=multi-user.target
