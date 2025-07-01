@@ -1,6 +1,7 @@
 [Unit]
 Description=Display stdout (RAM files) on oled
-After=multi-user.target
+Requires=tmp.mount
+After=multi-user.target tmp.mount
 
 [Service]
 Type=idle

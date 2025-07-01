@@ -15,11 +15,29 @@ A screensaver is triggered if $screensaver_delay is overpasss without any change
 |SCK  | GPIO3 | 5   |
 |GND  | GND   | 6   |
 
+
+## Configure RAMDISK
+
+```
+sudo nano /etc/fstab
+```
+
+Add these lines
+
+```
+# RAM disk tmp and log in RAM disk
+tmpfs /tmp  tmpfs defaults,noatime 0 0
+tmpfs /var/log  tmpfs defaults,noatime,size=16m 0 0
+```
+
+
+reboot
+
 ## Installation
 
 1. On RPi enable i2c
 
-    In file `/boot/config.txt` add or modify the line
+    In file `/boot/firmware/config.txt` add or modify the line
 
     ```
     dtparam=i2c_arm=on
